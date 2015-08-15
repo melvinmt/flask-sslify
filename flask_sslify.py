@@ -9,8 +9,7 @@ class SSLify(object):
     """Secures your Flask App."""
 
     def __init__(self, **kwargs):
-        if kwargs['app'] is not None:
-            self.init_app(**kwargs)
+        self.init_app(**kwargs)
 
     def init_app(self, app, age=YEAR_IN_SECS, subdomains=False, permanent=False, skips=None):
         self.app = app or current_app
