@@ -11,7 +11,7 @@ class SSLify(object):
     def __init__(self, **kwargs):
         self.init_app(**kwargs)
 
-    def init_app(self, app, age=YEAR_IN_SECS, subdomains=False, permanent=False, skips=None):
+    def init_app(self, app=None, age=YEAR_IN_SECS, subdomains=False, permanent=False, skips=None):
         self.app = app or current_app
         self.hsts_age = age
 
